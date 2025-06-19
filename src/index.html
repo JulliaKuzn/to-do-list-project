@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="./styles/main.styles.css">
+</head>
+
+<body>
+    <div id="selectList">
+        <label>Select todo list:</label>
+        <select id="availableLists">
+        </select>
+        <button id="deleteList">Delete selected list</button>
+    </div>
+
+    <div id="addNewList">
+        <label>Set name for the new list</label>
+        <input id="newListName" type="text" />
+        <button id="addNewListBtn">Add new list</button>
+    </div>
+
+    <div id="addNewItem">
+        <label for="newItemText">Enter task:</label>
+        <input id="newItemText" type="text" placeholder="Type your task here..." />
+
+        <fieldset>
+            <legend>Select a task priority:</legend>
+
+            <div>
+                <input type="radio" id="low-priority" name="priority" value="Low" />
+                <label for="low-priority">Low</label>
+            </div>
+
+            <div>
+                <input type="radio" id="medium-priority" name="priority" value="Medium" checked />
+                <label for="medium-priority">Medium</label>
+            </div>
+
+            <div>
+                <input type="radio" id="high-priority" name="priority" value="High" />
+                <label for="high-priority">High</label>
+            </div>
+        </fieldset>
+
+        <button id="addBtn">Add item</button>
+        <div class="hidden" id="error-message">Please add list before adding items</div>
+    </div>
+
+    <button id="sortByPriority">Sort by priority</button>
+
+    <label for="filterTasks">Filter tasks:</label>
+    <select id="filterTasks">
+        <option value="all" selected>All</option>
+        <option value="new">New</option>
+        <option value="done">Done</option>
+    </select>
+    <div id="listOfItems">
+
+    </div>
+
+    <button id="toggleThemeBtn" class="button-theme-toggle">Toggle Theme</button>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
